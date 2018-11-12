@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+.divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+.body {
+    background-color: '#FFFFFF'
+}
+
+
+  .circle-badge-1 {
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50px;
+    background:#505050;
+    border: 1px solid;
+    color:white;
+    margin-left:auto;
+    margin-right:auto;
+  }
+ 
+  .circle-badge-noclick {
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50px;
+    background:white;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .circle-badge-click {
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50px;
+    background:blue;
+    border:1px;
+    color:white;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  
+ 
+  .circle-badge-noclick {
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50px;
+    background:white;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+.circle-badge-green {
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50px;
+    background: #B8D32A;
+    border:1px;
+    color:white;
+    margin-left:auto;
+    margin-right:auto;
+}
+.circle-badge-emptygreen {
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50px;
+    background:white;
+    border:1px solid;
+    color: #B8D32A;
+    margin-left:auto;
+    margin-right:auto;
+}
+.circle-badge-emptyblue {
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50px;
+    background:white;
+    border:1px solid;
+    border-color: #00A1DF;
+    color:#505050;
+    margin-left:auto;
+    margin-right:auto;
+}
+.circle-badge-blue {
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50px;
+    background: #00A1DF;
+    border:1px;
+    color:white;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.circle-badge-outerblue {
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 50px;
+    background: #00A1DF;
+    border:1px;
+    color:white;
+    margin-left:auto;
+    margin-right:auto;
+}

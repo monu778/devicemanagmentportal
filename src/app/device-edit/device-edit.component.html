@@ -1,0 +1,48 @@
+<div   *ngIf="loaded" style="padding-left:5px; padding-right:5px" >
+<div class="row" style="background-color:#F7F7F8;height:75px">
+  <div class="col-md-7 col-lg-7" style="padding-top:25px">
+      <h4 style="font-weight: 100;color:#505050" 
+      (click)="goBack()"> &lt; &nbsp; {{device.userName}}'s Phone </h4>
+  </div>
+  <div class="col-md-3 col-lg-3">
+      
+  </div>
+  <div class="col-md-2 col-lg-2" style="padding-top:20px">
+      <button class="btn btn-success form-control" type="button"  (click)="onPublish()"
+        style="border-radius: 50px;background-color:#B8D32A;border:#B8D32A">
+        Publish
+    </button>
+  </div>
+</div>
+<br>
+<div class="row" >
+    <div class="col-md-5" style="padding-top:40px">
+      <div class="row">
+        <div class="col-md-12">
+        <img src="./assets/images/Cisco_SPA508G_small.png" alt="{{device.modelName}}"
+        class="img-responsive" 
+        style="max-height:300px" class="pull-left">
+      </div>
+    </div>
+    <div class="row" style="padding-top:20px">
+      <div class="col-md-4">
+        <span> Model Name</span><br>
+        <span> {{device.modelName}}</span>
+      </div>
+      <div class="col-md-4">
+        <span> Mac  Address</span><br>
+        <span> {{device.macAddress}}</span>
+      </div>
+      <div class="col-md-4">
+        <span>Last Configured</span><br>
+        <span *ngIf="device.lastConfigured!=''">{{device.lastConfigured}}</span>
+        <span *ngIf="device.lastConfigured ==''">Not Contgured</span>
+      </div>
+    </div>
+    </div>
+    <div class="clear both"></div>
+    <div class="col-md-7"> 
+      <app-device-edit-form [device]="device" [id]="id"></app-device-edit-form>
+    </div>
+</div>
+</div>

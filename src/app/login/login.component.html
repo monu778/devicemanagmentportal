@@ -1,0 +1,55 @@
+
+<div class="row">
+<div class="col-md-5">
+    <img src="assets/images/home_1.png" alt="vdm login page" 
+    class="image-responsive" width="100%">
+</div>
+
+<div class="col-md-7" style="font-family: CiscoSans, Regular">
+   <h2 style="font-weight: 100;color:'#000000'"> Welcome to Visual Device Management </h2>
+   <div><span style="font-size: 12px"> Need a Visual Device Managment account?&nbsp;<a href="#" style="color:#00A1DF">Sign Up</a></span></div>
+    <form (ngSubmit)="addForm(f)" #f="ngForm">
+        <div class="row">
+          <div class="col-sm-10 form-group">
+            <label for="name">Email</label>
+           <!-- <input type="text" id="name" class="form-control" #nameInput >
+           -->
+           <input type="email" id="name"   value = "abcde@cisco.com" class="form-control" ngModel name="name" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-10 form-group">
+            <label for="pswd">password</label>
+           <!-- <input type="text" id="amount" class="form-control" #amountInput> -->
+           <input type="password" id="pswd" class="form-control" 
+           name="password" value="fdsdsfs"  ngModel required>
+            
+           </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 form-group">
+              <input type="checkbox" name="keepLogin" id='c1'/>&nbsp;
+              <label for='c1' style="font-size: 12px">Keep me logged in</label>
+            </div>
+            <div class="col-sm-5">
+             <span style="color: #00A1DF;font-size: 12px"> 
+               Forgot username? &nbsp;&nbsp; Forgotpassword?
+              </span>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-7"></div>
+          <div class="col-sm-3">
+            
+           <!-- <button class="btn btn-success"  (click)="onAddItem()">Add</button> -->
+  
+            <div class="float-right" style="border-radius: 50px;background-color:#B8D32A;width:130px">
+              <button class="btn btn-success pull-right form-control" type="submit" 
+            style ="background-color:#B8D32A;border-color:#B8D32A;border-radius: 50px;" >Login</button>
+          </div>
+        
+        </div>
+        </div>
+      </form>
+</div>
+</div>

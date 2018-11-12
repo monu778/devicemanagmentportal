@@ -1,0 +1,150 @@
+<div class="row">
+  <div class="com-md-12">
+      <p style="font-size: 18px;color:#505050;font-weight: 100;font-family:sans-serif" >Device  Configuration</p>
+      <p style="font-size:12px;font-weight:60">Assign custom functions to each device key. The first few kwys reflect lines already set on this
+        device that can not be edited excpet for ringing options
+      </p>
+  </div>
+</div>
+<div class="row" style="background-color:#F7F7F8;border-radius: 10px">
+  <div class="col-md-12">
+    <table class="table striped">
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Name</th>
+                <th>LinePort</th>
+                <th>Extn</th>
+                <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="circle-badge-1">1</div></td>
+              <td>{{device.userName}}<br>
+                <span>{{ringText1}}</span>&nbsp; 
+                <span style="text-decoration: underline;color:#00A1DF" 
+                (click)="onEdit(1)">{{this.editText1}}</span>
+              </td>
+              <td>{{device.userName}}@cisco.com</td>
+              <td>1234</td>
+              <td>Phone</td>
+            </tr>
+            <tr class="border:0px" *ngIf="editEnable1">
+              <td colspan="5">
+                <span *ngFor="let i of [0,1,2,3,4,5]">
+                  <span *ngIf="i==0" id="ringer_{{i}}" class="editRinger"  style="font-size:14px" (click)="onRingerChange(1,i,ringerValue1)" #ringerValue1>
+                    Silent 
+                  </span>
+                  &nbsp;
+                  <span *ngIf="i!=0" class="editRinger" id="ringer_{{i}}" style="font-size:14px" (click)="onRingerChange(1,i,ringerValue1)" #ringerValue1>
+                      Ringer Tone {{i}}
+                    </span>
+                </span>
+              </td>
+            </tr>
+            <tr>
+                <td><div class="circle-badge-1">2</div></td>
+                <td>Andy<br>
+
+                    <span>{{ringText2}}</span>&nbsp; 
+                    <span style="text-decoration: underline;color:#00A1DF"
+                     (click)="onEdit(2)">{{editText2}}</span>
+                </td>
+                <td>andy@cisco.com</td>
+                <td>2345</td>
+                <td>Phone</td>
+            </tr>
+            <tr *ngIf="editEnable2">
+                <td colspan="5">
+                  <span *ngFor="let i of [0,1,2,3,4,5]">
+                    <span *ngIf="i==0" class="editRinger" style="font-size:14px" (click)="onRingerChange(2,i,ringerValue2)" #ringerValue2>
+                      Silent
+                    </span>
+                    &nbsp;<span *ngIf="i!=0" class="editRinger" (click)="onRingerChange(2,i,ringerValue2)"   style="font-size:14px" #ringerValue2>
+                        Ringer Tone {{i}}
+                      </span>
+                  </span>
+                </td>
+              </tr>
+          </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<div class="row" style="border:1px solid;border-color:#F7F7F8;border-radius: 10px">
+    <div class="col-md-12">
+      <form (ngSubmit)="addForm(f)" #f="ngForm">
+      <table class="table  striped centered" width="100%">
+          <thead>
+              <tr>
+                <th>Key</th>
+                <th>Function</th>
+                <th>Phone Number</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let line of linearray|slice:0:6">
+                <td>  
+                   <div class="circle-badge-emptyblue" (click)="onRoundFillBlue(line,lineValue1)" #lineValue1>
+                     {{line}}
+                    </div>         
+                </td>
+                <td> 
+                  <select ngModel name="select1" (change)="onChangeFunc()">
+                    <option value="" select>Select</option>
+                    <option [value]="speeddial">Speed Dial</option>
+                    <option [value]="busylamp">Busy Lamp Field</option>
+                    <option [value]="disabled">Disabled</option>
+                  </select>
+                </td>
+                <td><input type="tel" style="border-width:0 0 1px;outline: 0" ngModel name="name"/></td>
+                <td><input type="text" ngModel name="label" /></td>
+              </tr>
+            </tbody>
+      </table>
+      </form>
+    </div>
+</div>
+<br>
+<div class="row" style="border:1px solid;border-color:#F7F7F8;border-radius: 10px">
+    <div class="col-md-12">
+      <form (ngSubmit)="addForm(f1)" #f1="ngForm">
+      <table class="table  striped centered" width="100%">
+          <thead>
+              <tr>
+                <th>Key</th>
+                <th>Function</th>
+                <th>Destination</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let line of linearray|slice:6">
+                <td>  
+                   <div class="circle-badge-emptygreen" (click)="onRoundFillGreen(line,lineValue2)" #lineValue2>
+                      {{line}}
+                    </div>         
+                </td>
+                <td> 
+                  <select ngModel name="select2" (change)="onChangeFunc($event.target.value,line)" #select2>
+                    <option value="" select>Select</option>
+                    <option value="speeddial">Speed Dial</option>
+                    <option value="function">Function</option>
+                    <option value="disabled">Disabled</option>
+                  </select>
+                </td>
+                <td #d>
+                 
+                 
+                    <input type="tel" class="i2" ngModel name="name1"/>
+                
+                </td>
+                <td><input type="text" ngModel name="label2" /></td>
+              </tr>
+            </tbody>
+      </table>
+      </form>
+    </div>
+</div>

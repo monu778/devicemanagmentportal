@@ -1,0 +1,9 @@
+
+<div class="row" style="padding:1px;margin-right:1px">
+    <div class="col-md-12 col-lg-12" >
+      <h2 style="font-weight: 100;color: #505050;">My Devices</h2>
+    <app-device-item  *ngFor="let deviceItem of devices; let i = index" 
+      [device]="deviceItem" (recipeSelected)="selectedRecipe(deviceItem)" [index]="i">
+    </app-device-item>
+  </div>   
+</div>

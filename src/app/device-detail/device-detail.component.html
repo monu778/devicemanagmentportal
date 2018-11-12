@@ -1,0 +1,43 @@
+<div *ngIf="loaded">
+<div *ngIf="device.lastConfigured == ''">
+    <div class="row">
+        <div class="col-md-12">
+          <h3>{{device.userName}}'s Phone</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+          <span>Model</span><br>
+          <span>{{device.modelName}}</span>
+        </div>
+        <div class="col-md-4">
+            <span>Mac Adress</span><br>
+            <span>{{device.macAddress}}</span>
+        </div>
+        <div class="col-md-4">
+            <span>Last Configured </span><br>
+            <span>None</span>
+        </div>
+    </div>
+  <div class="row" style= "background-image: url(assets/images/Group_145.svg);margin-top:50px">
+    <div class="col-md-6" style= "padding-top: 80px;">
+      <img src="assets/images/{{device.image1}}" 
+      alt="{{device.modelName}}" class="img-responsive" style="max-height:300px;">
+    </div>
+    <div class="col-md-6" style="padding-top: 90px;padding-left:40px">
+      <div>
+        <h2 style="font-weight: 100"> Lets get <br>Configuring</h2>
+      </div>
+        <div  style="width:140px; height: 40px;text-align:center;padding-top: 8px;
+        color:white;background-color:#B8D32A;border-radius: 50px;margin-top:50px"
+         (click) = "onEdit()"> Start </div>    
+    </div>
+</div>
+</div>
+<div *ngIf="device.lastConfigured !=''" style="margin:10px">
+
+     <app-device-complete-detatil [device]="device" [id]="id">
+
+     </app-device-complete-detatil>
+</div>
+</div>

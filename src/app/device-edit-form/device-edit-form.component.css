@@ -1,0 +1,64 @@
+input {
+    outline: 0;
+    border-width: 0 0 1px;
+    border-color: #505050
+   
+  }
+  input:focus {
+    border-color:#00A1DF
+  }
+  input.i2:focus {
+    border-color:#B8D32A
+  }
+  .editRinger {
+    border:1px solid;
+    border-color:#00A1DF;
+    border-radius: 25px;
+    padding: 3px;
+    color:#00A1DF;
+  }
+  .editRingerFill {
+    border:1px solid;
+    border-color:#00A1DF;
+    background: #00A1DF;
+    border-radius: 25px;
+    padding:3px;
+    color:#fff;
+  }
+
+ select{
+  -webkit-appearance:menulist;
+  -webkit-rtl-ordering: logical;
+  color: black;
+    text-rendering: auto;
+    color: initial;
+    
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    background-color: white;
+    font: 400 16px;
+    border-color: #00A1DF !important;
+}
+  select {
+    outline: 0;
+    border-width: 0;
+    
+    
+  }
+  option {
+    margin: 40px;
+    background-color:#fff;
+    color: #00A1DF;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+    border-color: #00A1DF !important;
+}
+option:not(:checked) { 
+  background-color: white; 
+  color:#000;
+  border-color: #00A1DF !important;
+}
+
+

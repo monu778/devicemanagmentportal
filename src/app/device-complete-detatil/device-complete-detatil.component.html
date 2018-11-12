@@ -1,0 +1,81 @@
+<div class="row">
+
+</div>
+  <div class="row">
+    <div class="col-md-5">
+        <span class="float-left">
+          <img src="assets/images/Cisco_SPA508G_small.png" 
+          height="150px" width="150px"
+          class="image-responsive">
+        </span>
+    </div>
+    <div class="col-md-7">
+        <span>
+            Model Name
+          </span> <br>
+          <span>
+            {{device.modelName}}
+          </span>
+        <hr>
+        <span>
+          Mac Adress
+        </span><br>
+        <span>
+          {{device.macAddress}}
+        </span>
+        <hr>
+        <span> Last Configured</span><br>
+        <span>{{device.lastConfigured}}</span>
+        <hr>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5"></div>
+      <div class="col-md-7 float-right" style="font-size:10px">
+        <button type="button" class="btn btn-outline-dark" style="border-radius: 25px;min-width:70px" (click) ="goEditForm()">Edit</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-dark" style="border-radius:25px">Share </button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-outline-dark" style="border-radius:25px" (click)="redirectTrouble()">Trouble shoot</button>
+      </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+ <div class="col-md-12">
+    <table class="table table-striped bordered striped centered" width="100%">
+      <tr>
+        <td>
+          <div class="circle-badge-black">1</div>
+        </td>
+        <td>Line 1</td>
+        <td>Jake Smit</td>
+        <td>301.663.5381</td>
+        <td>5381</td>
+      </tr>
+      <tr>
+        <td>
+            <div class="circle-badge-black">2</div>
+        </td>
+        <td>Line 2</td>
+        <td>Front Desk</td>
+        <td>301.663.5382</td>
+        <td>5382</td>
+      </tr>
+      <tr *ngFor="let l of lines;  index as i">
+        <td>
+          <div [ngClass]="i > 6 ? 'circle-badge-green':'circle-badge-blue'">{{l.line}}</div>
+        </td>
+        <td>
+          {{l.select}}
+        </td>
+        <td>
+          {{l.phone}}
+        </td>
+        <td>
+            {{l.label}}
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+</div>
+</div>
